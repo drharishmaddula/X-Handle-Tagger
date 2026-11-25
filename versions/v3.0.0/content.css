@@ -1,0 +1,144 @@
+/* Handle Tagger - badges, note marker, "+ Tag" button and quick-tag menu on X */
+.htg-wrap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.htg-badge {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 3px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.htg-note {
+  background-color: #536471;
+  color: #ffffff;
+}
+
+/* Ethos badge. Colored by level when found; grey dashed when not on Ethos or loading. */
+.htg-ethos-none {
+  background: transparent;
+  color: #8899a6;
+  border: 1px dashed #8899a6;
+  padding: 2px 6px;
+}
+
+#htg-menu .htg-menu-ethos {
+  font-size: 12px;
+  margin-bottom: 8px;
+  opacity: 0.85;
+}
+
+.htg-tagbtn {
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.2;
+  padding: 2px 7px;
+  border: 1px dashed #8899a6;
+  border-radius: 999px;
+  background: transparent;
+  color: #8899a6;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.htg-tagbtn:hover {
+  color: #1d9bf0;
+  border-color: #1d9bf0;
+}
+
+.htg-action {
+  cursor: pointer;
+}
+
+/* Quick-tag menu */
+#htg-menu {
+  position: fixed;
+  z-index: 2147483647;
+  width: 260px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #cfd9de;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #0f1419;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+  text-align: left;
+}
+
+#htg-menu.htg-dark {
+  background: #15202b;
+  color: #e7e9ea;
+  border-color: #38444d;
+}
+
+#htg-menu .htg-menu-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+#htg-menu .htg-menu-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#htg-menu .htg-chip {
+  padding: 3px 9px;
+  border: 2px solid var(--c);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#htg-menu .htg-chip.on {
+  background: var(--c);
+  color: #ffffff;
+}
+
+#htg-menu textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 56px;
+  margin-top: 8px;
+  padding: 6px;
+  border: 1px solid #8899a6;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  resize: vertical;
+}
+
+#htg-menu .htg-menu-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+#htg-menu .htg-done {
+  padding: 3px 12px;
+  border: 1px solid #8899a6;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}

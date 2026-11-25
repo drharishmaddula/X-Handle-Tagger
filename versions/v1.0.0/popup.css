@@ -1,0 +1,119 @@
+/* Handle Tagger - popup panel styling */
+body {
+  width: 340px;
+  margin: 0;
+  padding: 12px;
+  font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body { color: #e7e9ea; background: #15202b; }
+}
+
+h1 { font-size: 16px; margin: 0 0 4px; }
+h2 { font-size: 13px; margin: 0 0 6px; }
+
+section {
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+  padding: 10px 0 4px;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 6px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+}
+
+input[type="color"] {
+  width: 36px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+button {
+  padding: 5px 10px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:disabled { opacity: 0.4; cursor: default; }
+
+button.link {
+  border: none;
+  padding: 0;
+  font-weight: 600;
+}
+
+button.dangerBtn { color: #c92a2a; }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.chip {
+  border: 2px solid var(--c);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-weight: 600;
+}
+
+.chip.on {
+  background: var(--c);
+  color: #ffffff;
+}
+
+.customRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.grow { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+ul {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  max-height: 180px;
+  overflow: auto;
+}
+
+li {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.small { font-size: 11px; }
+.muted { opacity: 0.7; }
+.error { color: #c92a2a; }

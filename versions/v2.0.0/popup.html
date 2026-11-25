@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Handle Tagger</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Handle Tagger</h1>
+
+  <section>
+    <h2>Account</h2>
+    <div class="row">
+      <span>@</span>
+      <input id="handle" type="text" placeholder="username" autocomplete="off" maxlength="16">
+    </div>
+    <div id="handleStatus" class="small muted"></div>
+    <div id="labelList" class="chips"></div>
+    <textarea id="note" placeholder="Private note (only you see this)" maxlength="500"></textarea>
+    <div class="small muted" id="noteStatus"></div>
+  </section>
+
+  <section>
+    <h2>New custom label</h2>
+    <div class="row">
+      <input id="newLabelName" type="text" placeholder="Label name" maxlength="30" autocomplete="off">
+      <input id="newLabelColor" type="color" value="#1971c2" title="Pick a color">
+      <button id="addLabel">Add</button>
+    </div>
+    <div id="customList" class="small"></div>
+  </section>
+
+  <section>
+    <h2>Tagged accounts</h2>
+    <div class="row">
+      <select id="labelFilter" title="Show only accounts with this label"></select>
+      <input id="search" type="text" placeholder="Search handles" autocomplete="off">
+    </div>
+    <div id="filterSummary" class="small muted"></div>
+    <ul id="taggedList"></ul>
+  </section>
+
+  <section>
+    <h2>Backup</h2>
+    <div class="row">
+      <button id="exportBtn">Export</button>
+      <button id="importBtn">Import</button>
+      <input id="importFile" type="file" accept="application/json" hidden>
+    </div>
+    <div id="message" class="small muted"></div>
+  </section>
+
+  <script src="common.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

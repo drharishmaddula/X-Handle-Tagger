@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Handle Tagger for X",
+  "version": "3.0.0",
+  "description": "Private labels and notes for X/Twitter accounts, shown beside Ethos reputation scores.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{7d3f2b1e-4c8a-4e2b-9f1a-6b5c8d9e0a12}",
+      "strict_min_version": "109.0"
+    }
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://x.com/*",
+    "*://twitter.com/*",
+    "https://api.ethos.network/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://x.com/*", "*://twitter.com/*"],
+      "js": ["common.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Handle Tagger",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+T"
+      },
+      "description": "Open Handle Tagger for the account you are viewing"
+    }
+  }
+}
